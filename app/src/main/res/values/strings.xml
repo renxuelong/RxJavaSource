@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RxJavaRetrofitDagger2Demo</string>
+    <string name="retrofit">Retrofit</string>
+    <string name="rxjava">RxJava</string>
+    <string name="http">HTTP</string>
+    <string name="gson">GSON</string>
+    <string name="retrofitrxjava">RetrofitRxJava</string>
+    <string name="dagger2">Dagger2</string>
+    <string name="rrd">RRD</string>
+</resources>
