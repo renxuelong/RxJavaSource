@@ -23,6 +23,7 @@
         <activity android:name=".rxjava.RxJavaActivity" />
         <activity android:name=".rxretrofit.RxJavaRetrofitActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
+        <activity android:name=".dagger2.Dagger22Activity" />
         <activity android:name=".RxJavaRetrofitDagger2.RRDActivity" />
     </application>
 

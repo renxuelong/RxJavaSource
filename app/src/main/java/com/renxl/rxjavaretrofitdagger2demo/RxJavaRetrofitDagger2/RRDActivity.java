@@ -41,7 +41,7 @@ public class RRDActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rrd);
         ButterKnife.bind(this);
 
-        DaggerRRDComponent.builder().rRDModule(new RRDModule()).build().inject(this);
+        DaggerRRDComponent.builder().build().inject(this);
 
     }
 

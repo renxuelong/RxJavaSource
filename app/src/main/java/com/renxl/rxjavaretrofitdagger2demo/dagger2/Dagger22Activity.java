@@ -1,12 +1,12 @@
 package com.renxl.rxjavaretrofitdagger2demo.dagger2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.renxl.rxjavaretrofitdagger2demo.R;
-import com.renxl.rxjavaretrofitdagger2demo.dagger2.componet.Dagger2Component;
+import com.renxl.rxjavaretrofitdagger2demo.RRDApp;
 
 import javax.inject.Inject;
 
@@ -17,15 +17,16 @@ import okhttp3.OkHttpClient;
 
 /**
  * Created by renxl
- * On 2017/4/10 20:50.
+ * On 2017/4/11 13:55.
  */
 
-public class Dagger2Activity extends AppCompatActivity {
-    @BindView(R.id.btn_dagger)
-    Button btnDagger;
+public class Dagger22Activity extends AppCompatActivity {
+    @BindView(R.id.btn_dagger22)
+    Button btnDagger22;
+    @BindView(R.id.tv_dagger22)
+    TextView tvDagger22;
 
-    // 声明需要注入的对象
-    @DaggerQualifier("A")
+    @DaggerQualifier("B")
     @Inject
     User user;
 
@@ -35,18 +36,14 @@ public class Dagger2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dagger2);
+        setContentView(R.layout.activity_dagger22);
         ButterKnife.bind(this);
 
-        // 绑定注入的 Component，如果没这个步骤则不会成功注入
-        Dagger2Component.getInstance().inject(this);
-
-        // dagger2Module(new Dagger2Module()) // 如果 Component 中使用了 Module 并且 Module 的构造函数需要参数， 则必须添加 Module
+        ((RRDApp) getApplication()).getSubDagger2Component().inject(this);
     }
 
-    @OnClick(R.id.btn_dagger)
+    @OnClick(R.id.btn_dagger22)
     public void onViewClicked() {
-        startActivity(new Intent(this, Dagger22Activity.class));
         user.doSomething("Dagger2 生效 USER" + user.toString() + "\n" + okHttpClient.toString());
     }
 }

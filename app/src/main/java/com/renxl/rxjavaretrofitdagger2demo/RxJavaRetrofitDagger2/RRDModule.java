@@ -2,8 +2,6 @@ package com.renxl.rxjavaretrofitdagger2demo.RxJavaRetrofitDagger2;
 
 import com.renxl.rxjavaretrofitdagger2demo.Constants;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import retrofit2.Retrofit;
@@ -18,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RRDModule {
 
     @Provides
-    RRDService getRRDService() {
+    RRDService provideRRDService() {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.PRODUCTION)
                 .addConverterFactory(GsonConverterFactory.create())
