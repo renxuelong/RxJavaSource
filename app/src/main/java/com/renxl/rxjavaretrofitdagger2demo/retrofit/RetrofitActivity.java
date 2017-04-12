@@ -35,6 +35,8 @@ public class RetrofitActivity extends AppCompatActivity {
     @BindView(R.id.btn_gson)
     Button btnGson;
 
+    // revert
+
     private OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new StethoInterceptor()).build();
 
     @Override
