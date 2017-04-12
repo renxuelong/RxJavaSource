@@ -7,7 +7,7 @@ import dagger.Component;
  * On 2017/4/11 10:31.
  */
 @Component(modules = RRDModule.class)
-public interface RRDComponent {
+interface RRDComponent {
 
     void inject(RRDActivity activity);
 }
