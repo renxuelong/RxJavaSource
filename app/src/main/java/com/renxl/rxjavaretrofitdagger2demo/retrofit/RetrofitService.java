@@ -14,7 +14,7 @@ import retrofit2.http.Query;
  * On 2017/4/10 14:28.
  */
 
-public interface RetrofitService {
+interface RetrofitService {
     @GET(Constants.HOME_BANNER)
     Call<ResponseBody> retrofitRequest(@Query("type") int type);
 
