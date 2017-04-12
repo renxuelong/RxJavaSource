@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * On 2017/4/11 10:27.
  */
 @Module
-public class RRDModule {
+class RRDModule {
 
     @Provides
     RRDService provideRRDService() {
