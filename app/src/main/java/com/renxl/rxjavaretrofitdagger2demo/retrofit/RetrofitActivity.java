@@ -35,8 +35,6 @@ public class RetrofitActivity extends AppCompatActivity {
     @BindView(R.id.btn_gson)
     Button btnGson;
 
-    // revert
-
     private OkHttpClient okHttpClient = new OkHttpClient.Builder().addNetworkInterceptor(new StethoInterceptor()).build();
 
     @Override
@@ -111,6 +109,8 @@ public class RetrofitActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 final StringBuilder sb = new StringBuilder();
+
+                if (response == null) return;
 
                 sb.append("Code: ").append(response.code()).append("\n");
                 try {
