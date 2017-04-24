@@ -7,4 +7,5 @@
     <string name="retrofitrxjava">RetrofitRxJava</string>
     <string name="dagger2">Dagger2</string>
     <string name="rrd">RRD</string>
+    <string name="rxjava_map">RxJava_Map</string>
 </resources>

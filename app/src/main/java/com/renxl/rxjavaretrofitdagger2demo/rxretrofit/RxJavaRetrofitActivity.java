@@ -1,5 +1,6 @@
 package com.renxl.rxjavaretrofitdagger2demo.rxretrofit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -44,6 +45,8 @@ public class RxJavaRetrofitActivity extends AppCompatActivity {
     }
 
     private void doRxJavaRetrofitRequest() {
+
+
         RxRetrofitClient.getRxRetrofitService().getAdvertisings(1)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -57,6 +60,8 @@ public class RxJavaRetrofitActivity extends AppCompatActivity {
                     public void onNext(List<Advertising> value) {
                         Log.i("renxl", "result" + value.toString());
                         tvResult.setText(value.toString());
+
+                        startActivity(new Intent(RxJavaRetrofitActivity.this, RxJavaMapActivity.class));
                     }
 
                     @Override

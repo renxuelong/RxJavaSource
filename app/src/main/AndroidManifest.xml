@@ -24,7 +24,8 @@
         <activity android:name=".rxretrofit.RxJavaRetrofitActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
         <activity android:name=".dagger2.Dagger22Activity" />
-        <activity android:name=".RxJavaRetrofitDagger2.RRDActivity" />
+        <activity android:name=".rxjavaretrofitdagger2.RRDActivity" />
+        <activity android:name=".rxretrofit.RxJavaMapActivity" />
     </application>
 
 </manifest>

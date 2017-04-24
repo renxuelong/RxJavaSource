@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.renxl.rxjavaretrofitdagger2demo.RxJavaRetrofitDagger2.RRDActivity;
 import com.renxl.rxjavaretrofitdagger2demo.dagger2.Dagger2Activity;
 import com.renxl.rxjavaretrofitdagger2demo.retrofit.RetrofitActivity;
 import com.renxl.rxjavaretrofitdagger2demo.rxjava.RxJavaActivity;
+import com.renxl.rxjavaretrofitdagger2demo.rxjavaretrofitdagger2.RRDActivity;
 import com.renxl.rxjavaretrofitdagger2demo.rxretrofit.RxJavaRetrofitActivity;
 
 import butterknife.BindView;

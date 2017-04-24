@@ -1,4 +1,4 @@
-package com.renxl.rxjavaretrofitdagger2demo.RxJavaRetrofitDagger2;
+package com.renxl.rxjavaretrofitdagger2demo.rxjavaretrofitdagger2;
 
 import com.renxl.rxjavaretrofitdagger2demo.Constants;
 

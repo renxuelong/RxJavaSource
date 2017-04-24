@@ -20,6 +20,7 @@ import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.Call;
@@ -35,11 +36,15 @@ public class RxJavaActivity extends AppCompatActivity {
     @BindView(R.id.tv_result)
     TextView tvResult;
 
+    private CompositeDisposable disposable;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rx_java);
         ButterKnife.bind(this);
+
+        disposable = new CompositeDisposable();
     }
 
     @OnClick(R.id.btn_rxjava_request)
@@ -71,7 +76,7 @@ public class RxJavaActivity extends AppCompatActivity {
 
                     @Override
                     public void onSubscribe(Disposable d) {
-
+                        disposable.add(d);
                     }
 
                     @Override
@@ -95,5 +100,11 @@ public class RxJavaActivity extends AppCompatActivity {
                         Log.i("renxl", "onComplete");
                     }
                 });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        disposable.clear();
     }
 }

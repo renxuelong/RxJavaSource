@@ -19,4 +19,6 @@ public interface RxRetrofitService {
     @GET(Constants.HOME_BANNER)
     Observable<List<Advertising>> getAdvertisings(@Query("type") int type);
 
+    @GET(Constants.HOME_BANNER)
+    Observable<List<Advertising>> getAdvertising(@Query("type") int type);
 }

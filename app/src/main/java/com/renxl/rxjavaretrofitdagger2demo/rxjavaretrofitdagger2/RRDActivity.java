@@ -1,4 +1,4 @@
-package com.renxl.rxjavaretrofitdagger2demo.RxJavaRetrofitDagger2;
+package com.renxl.rxjavaretrofitdagger2demo.rxjavaretrofitdagger2;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
