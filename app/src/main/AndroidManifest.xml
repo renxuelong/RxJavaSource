@@ -26,6 +26,7 @@
         <activity android:name=".dagger2.Dagger22Activity" />
         <activity android:name=".rxjavaretrofitdagger2.RRDActivity" />
         <activity android:name=".rxretrofit.RxJavaMapActivity" />
+        <activity android:name=".rxjava_source.RxJavaSourceActivity"/>
     </application>
 
 </manifest>

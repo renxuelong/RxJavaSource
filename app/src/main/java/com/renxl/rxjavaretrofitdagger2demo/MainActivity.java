@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.renxl.rxjavaretrofitdagger2demo.dagger2.Dagger2Activity;
 import com.renxl.rxjavaretrofitdagger2demo.retrofit.RetrofitActivity;
 import com.renxl.rxjavaretrofitdagger2demo.rxjava.RxJavaActivity;
+import com.renxl.rxjavaretrofitdagger2demo.rxjava_source.RxJavaSourceActivity;
 import com.renxl.rxjavaretrofitdagger2demo.rxjavaretrofitdagger2.RRDActivity;
 import com.renxl.rxjavaretrofitdagger2demo.rxretrofit.RxJavaRetrofitActivity;
 
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_retrofit, R.id.RxJava, R.id.btn_rx_java_retrofit, R.id.btn_dagger2, R.id.btn_rrd})
+    @OnClick({R.id.btn_retrofit, R.id.RxJava, R.id.btn_rx_java_retrofit, R.id.btn_dagger2, R.id.btn_rrd, R.id.btn_rxjava_source})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_retrofit:
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_rrd:
                 startActivity(new Intent(this, RRDActivity.class));
+                break;
+            case R.id.btn_rxjava_source:
+                startActivity(new Intent(this, RxJavaSourceActivity.class));
                 break;
         }
     }

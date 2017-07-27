@@ -21,12 +21,12 @@ class RxRetrofitClient {
     }
 
     private static Retrofit instanceRetrofit() {
-        Retrofit retrofit = new Retrofit.Builder()
+        mRetrofit = new Retrofit.Builder()
                 .baseUrl(Constants.PRODUCTION)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create()) // 添加 Retrofit 与 RxJava 转化的 Adapter
                 .build();
-        return retrofit;
+        return mRetrofit;
     }
 
     static RxRetrofitService getRxRetrofitService() {
